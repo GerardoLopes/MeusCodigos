@@ -1,1 +1,69 @@
+/*
+Desafio: nível novato
+Criando as Cartas do Super Trunfo
 
+Neste primeiro nível, seu objetivo é
+construir a base do nosso jogo Super
+Trunfo de Países: um sistema para cadastrar
+as cartas com informações sobre as cidades.
+Você vai praticar a leitura de dados do usuário,
+o armazenamento em variáveis e a exibição dessas
+informações na tela.
+*/
+
+// Inclusão da biblioteca stdio.h
+#include <stdio.h>
+#include <conio.h>
+
+int main() // Função principal
+{
+  // Declarações das variáveis
+  char estado;
+  char _codigoCarta[5];
+  char _cidade[10];
+  int _numPopulacao;
+  float areaCidade, pib;
+  int _pontosTuristicos;
+  float _densidadePopulacional;
+  int contador = 1;
+
+  // Estrutura de repetição
+  while (contador <= 2)
+  {
+    // Contagem
+    contador++;
+    // Informar o nome do estado.
+    printf("Informe a primeira letra do estado: \n");
+    scanf("%c", &estado);
+
+    // Informar o código da carta.
+    printf("Informe o codigo da carta: \n");
+    scanf("%s", _codigoCarta);
+
+    // Informe o nome da cidade
+    printf("Informe o nome da cidade: \n");
+    scanf("%s", _cidade);
+
+    // Informe a população da cidade
+    printf("Informe o numero de habitantes da cidade: \n");
+    scanf("%d", &_numPopulacao);
+
+    // Informe a área da cidade
+    printf("Informe a area da cidade: \n");
+    scanf("%f", &areaCidade);
+
+    // Informe o PIB
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib);
+
+    // Informe o número de pontos turísticos
+    printf("Informe o numero de pontos turisticos: \n");
+    scanf("%d", &_pontosTuristicos);
+
+    system("cls");
+  }
+
+  _densidadePopulacional = _numPopulacao / areaCidade;
+
+  system("pause");
+}
